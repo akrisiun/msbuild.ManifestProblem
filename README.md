@@ -6,6 +6,20 @@ pwsh
 $env:FrameworkPathOverride="/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/4.5/"
 ```
 
+# Ubuntu (16.04) or Debian
+
+```
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+echo "deb http://download.mono-project.com/repo/ubuntu stable-xenial main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+sudo apt-get update
+sudo apt-get install mono-devel
+export FrameworkPathOverride=/usr/lib/mono/4.5/
+mono --version
+#Mono JIT compiler version 5.10.1.4 (tarball Wed Mar 21 10:51:27 UTC 2018)
+#Copyright (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-project.com
+
+```
+
 # GetNativeManifest MSB4057 errror 
 
 ```
