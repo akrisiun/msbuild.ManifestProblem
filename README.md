@@ -1,4 +1,10 @@
 
+# osx>
+
+```
+pwsh
+$env:FrameworkPathOverride="/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/4.5/"
+```
 
 # GetNativeManifest MSB4057 errror 
 

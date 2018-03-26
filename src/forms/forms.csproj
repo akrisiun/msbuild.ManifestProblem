@@ -4,6 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Configurations>Debug;Release</Configurations>
+    <Platforms>AnyCPU</Platforms>
+    <RuntimeIdentifiers>win7-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
+    <GenerateResourceMSBuildArchitecture>CurrentArchitecture</GenerateResourceMSBuildArchitecture>
+
     <ProjectGuid>{7EE78D44-5CEE-47E4-BB5C-50032494A573}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>forms2</RootNamespace>
@@ -79,7 +84,6 @@
       <Project>{31b21da6-d7d4-4ef7-b108-992c3590ca46}</Project>
       <Name>core</Name>
     </ProjectReference>
-
     <!-- GetNativeManifest fails? ?? 
     <ProjectReference Include="..\core\core.csproj">
       <Project>{31b21da6-d7d4-4ef7-b108-992c3590ca46}</Project>
