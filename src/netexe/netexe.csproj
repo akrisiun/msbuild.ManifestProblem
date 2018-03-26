@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <!--<OutputType>WinExe</OutputType>-->
+    <OutputType>Exe</OutputType>
+    <ProjectGuid>{A20C07FA-2591-4A7E-AAAA-6C8F9ADECFEE}</ProjectGuid>
+    <RootNamespace>NETEXE</RootNamespace>
+    <AssemblyName>NETEXE</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <!-- <TargetFrameworks>net47</TargetFrameworks> -->
+    <SetTargetFramework>TargetFramework=net47</SetTargetFramework>
+    
+    <!-- project.json workaround -->
+    <RuntimeIdentifiers>win7-x64</RuntimeIdentifiers>
+    
+    <!--<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+        <SetTargetFramework>TargetFramework=net45</SetTargetFramework>-->
+    <!--<SetTargetFramework>TargetFramework=net47</SetTargetFramework>-->
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NET46;NET47;</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- VisualStudion build fails?, uncomment here :(
+    <Reference Include="core">
+      <HintPath>..\core\bin\Debug\net47\core.dll</HintPath>
+    </Reference>
+    -->
+    <ProjectReference Include="..\core\core.csproj" />
+    <!-- GetNativeManifest fails? ?? no build error message?
+    -->
+    <ProjectReference Include="..\core\core.csproj" />
+    
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
