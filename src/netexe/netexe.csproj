@@ -1,22 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <!--<OutputType>WinExe</OutputType>-->
-    <OutputType>Exe</OutputType>
-    <ProjectGuid>{A20C07FA-2591-4A7E-AAAA-6C8F9ADECFEE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <!--<OutputType>Exe</OutputType>-->
     <RootNamespace>NETEXE</RootNamespace>
     <AssemblyName>NETEXE</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
-    <TargetFramework>net47</TargetFramework>
-    <SetTargetFramework>TargetFramework=net47</SetTargetFramework>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFramework>net48</TargetFramework>
+    <SetTargetFramework>TargetFramework=net48</SetTargetFramework>
     
     <!-- project.json workaround -->
     <RuntimeIdentifiers>win7-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
     
-    <!--<EnableDefaultCompileItems>false</EnableDefaultCompileItems>-->
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -24,15 +22,10 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE;NET46;NET47;</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <OutputPath>bin\Release\</OutputPath>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Xml" />
-    <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
     <!-- VisualStudion build fails?, uncomment here :(
@@ -45,5 +38,4 @@
     <ProjectReference Include="..\core\core.csproj" /> -->
     
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
