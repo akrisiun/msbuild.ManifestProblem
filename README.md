@@ -1,5 +1,20 @@
 
-# osx>
+## OutputType 'WinExe' problem
+```
+2.1.505 [C:\Program Files\dotnet\sdk]
+Microsoft.NETCore.App 2.1.9 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+Microsoft (R) Build Engine version 15.9.20+g88f5fadfbe for .NET Core
+
+SKD 2.1.505 runs but fails
+
+Unable to run your project.
+Please ensure you have a runnable project type and ensure 'dotnet run' supports this project.
+A runnable project should target a runnable TFM (for instance, netcoreapp2.0) and have OutputType 'Exe'.
+The current OutputType is 'WinExe'.
+```
+
+# osx
+
 
 ```
 pwsh

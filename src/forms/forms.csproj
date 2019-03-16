@@ -10,6 +10,8 @@
     <GenerateResourceMSBuildArchitecture>CurrentArchitecture</GenerateResourceMSBuildArchitecture>
 
     <ProjectGuid>{7EE78D44-5CEE-47E4-BB5C-50032494A573}</ProjectGuid>
+    <!-- <OutputType>Exe</OutputType>
+    -->
     <OutputType>WinExe</OutputType>
     <RootNamespace>forms2</RootNamespace>
     <AssemblyName>forms2</AssemblyName>
@@ -27,15 +29,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+  
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -88,10 +82,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\core\core.csproj">
-      <Project>{31b21da6-d7d4-4ef7-b108-992c3590ca46}</Project>
-      <Name>core</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\core\core.csproj" />
     <!-- GetNativeManifest fails? ?? 
     <ProjectReference Include="..\core\core.csproj">
       <Project>{31b21da6-d7d4-4ef7-b108-992c3590ca46}</Project>
